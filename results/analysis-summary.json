@@ -1,0 +1,22 @@
+{
+  "claude-zero-shot": {
+    "avgTokens": 294.75,
+    "avgLatency": 11940.75,
+    "count": 16
+  },
+  "claude-1-shot": {
+    "avgTokens": 233.875,
+    "avgLatency": 10733.125,
+    "count": 16
+  },
+  "claude-3-shot": {
+    "avgTokens": 236.0625,
+    "avgLatency": 11331.375,
+    "count": 16
+  },
+  "claude-5-shot": {
+    "avgTokens": 237.625,
+    "avgLatency": 11446.9375,
+    "count": 16
+  }
+}
