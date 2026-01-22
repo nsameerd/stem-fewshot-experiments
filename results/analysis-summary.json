@@ -1,22 +1,42 @@
 {
   "claude-zero-shot": {
-    "avgTokens": 294.75,
-    "avgLatency": 11940.75,
+    "avgTokens": 301.0625,
+    "avgLatency": 12088.5,
     "count": 16
   },
   "claude-1-shot": {
-    "avgTokens": 233.875,
-    "avgLatency": 10733.125,
+    "avgTokens": 241.4375,
+    "avgLatency": 11093.375,
     "count": 16
   },
   "claude-3-shot": {
-    "avgTokens": 236.0625,
-    "avgLatency": 11331.375,
+    "avgTokens": 229.6875,
+    "avgLatency": 11043.9375,
     "count": 16
   },
   "claude-5-shot": {
-    "avgTokens": 237.625,
-    "avgLatency": 11446.9375,
+    "avgTokens": 221.6875,
+    "avgLatency": 10562.375,
+    "count": 16
+  },
+  "gemini-zero-shot": {
+    "avgTokens": 419.0625,
+    "avgLatency": 4106.5625,
+    "count": 16
+  },
+  "gemini-1-shot": {
+    "avgTokens": 282,
+    "avgLatency": 3553.3125,
+    "count": 16
+  },
+  "gemini-3-shot": {
+    "avgTokens": 248.5625,
+    "avgLatency": 2991.0625,
+    "count": 16
+  },
+  "gemini-5-shot": {
+    "avgTokens": 235.0625,
+    "avgLatency": 3110.1875,
     "count": 16
   }
 }

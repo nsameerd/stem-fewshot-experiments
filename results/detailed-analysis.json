@@ -1,130 +1,130 @@
 {
   "summary": {
-    "totalExperiments": 64,
+    "totalExperiments": 128,
     "byCondition": {
       "zero-shot": {
-        "correct": 14,
-        "total": 16,
-        "accuracy": 0.875,
-        "avgScore": 0.8406250000000001,
-        "avgFormat": 6.0625,
-        "avgTokens": 294.75,
-        "avgLatency": 11940.75
+        "correct": 27,
+        "total": 32,
+        "accuracy": 0.84375,
+        "avgScore": 0.8093750000000001,
+        "avgFormat": 4.84375,
+        "avgTokens": 360.0625,
+        "avgLatency": 8097.53125
       },
       "1-shot": {
-        "correct": 14,
-        "total": 16,
-        "accuracy": 0.875,
-        "avgScore": 0.840625,
-        "avgFormat": 7.125,
-        "avgTokens": 233.875,
-        "avgLatency": 10733.125
+        "correct": 26,
+        "total": 32,
+        "accuracy": 0.8125,
+        "avgScore": 0.7927083333333333,
+        "avgFormat": 6.65625,
+        "avgTokens": 261.71875,
+        "avgLatency": 7323.34375
       },
       "3-shot": {
-        "correct": 14,
-        "total": 16,
+        "correct": 28,
+        "total": 32,
         "accuracy": 0.875,
-        "avgScore": 0.8385416666666667,
-        "avgFormat": 7.125,
-        "avgTokens": 236.0625,
-        "avgLatency": 11331.375
+        "avgScore": 0.8333333333333335,
+        "avgFormat": 6.46875,
+        "avgTokens": 239.125,
+        "avgLatency": 7017.5
       },
       "5-shot": {
-        "correct": 14,
-        "total": 16,
+        "correct": 28,
+        "total": 32,
         "accuracy": 0.875,
-        "avgScore": 0.8510416666666667,
-        "avgFormat": 7,
-        "avgTokens": 237.625,
-        "avgLatency": 11446.9375
+        "avgScore": 0.8255208333333335,
+        "avgFormat": 6.40625,
+        "avgTokens": 228.375,
+        "avgLatency": 6836.28125
       }
     },
     "byDomain": {
       "math": {
         "zero-shot": {
-          "correct": 3,
-          "total": 5,
+          "correct": 6,
+          "total": 10,
           "accuracy": 0.6
         },
         "1-shot": {
-          "correct": 3,
-          "total": 5,
-          "accuracy": 0.6
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
         },
         "3-shot": {
-          "correct": 3,
-          "total": 5,
+          "correct": 6,
+          "total": 10,
           "accuracy": 0.6
         },
         "5-shot": {
-          "correct": 3,
-          "total": 5,
+          "correct": 6,
+          "total": 10,
           "accuracy": 0.6
         }
       },
       "physics": {
         "zero-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         },
         "1-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         },
         "3-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         },
         "5-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         }
       },
       "chem": {
         "zero-shot": {
-          "correct": 4,
-          "total": 4,
-          "accuracy": 1
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
         },
         "1-shot": {
-          "correct": 4,
-          "total": 4,
-          "accuracy": 1
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
         },
         "3-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         },
         "5-shot": {
-          "correct": 4,
-          "total": 4,
+          "correct": 8,
+          "total": 8,
           "accuracy": 1
         }
       },
       "bio": {
         "zero-shot": {
-          "correct": 3,
-          "total": 3,
+          "correct": 6,
+          "total": 6,
           "accuracy": 1
         },
         "1-shot": {
-          "correct": 3,
-          "total": 3,
+          "correct": 6,
+          "total": 6,
           "accuracy": 1
         },
         "3-shot": {
-          "correct": 3,
-          "total": 3,
+          "correct": 6,
+          "total": 6,
           "accuracy": 1
         },
         "5-shot": {
-          "correct": 3,
-          "total": 3,
+          "correct": 6,
+          "total": 6,
           "accuracy": 1
         }
       }
@@ -142,8 +142,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 264,
-      "latencyMs": 11206
+      "tokenCount": 244,
+      "latencyMs": 10262
     },
     {
       "problemId": "math-1",
@@ -152,12 +152,12 @@
       "domain": "math",
       "correct": false,
       "correctnessScore": 0.4,
-      "formatScore": 6,
+      "formatScore": 8,
       "hasLatex": true,
       "hasBoxedAnswer": true,
-      "hasSteps": false,
-      "tokenCount": 261,
-      "latencyMs": 11123
+      "hasSteps": true,
+      "tokenCount": 267,
+      "latencyMs": 12022
     },
     {
       "problemId": "math-1",
@@ -170,8 +170,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 242,
-      "latencyMs": 10829
+      "tokenCount": 234,
+      "latencyMs": 10817
     },
     {
       "problemId": "math-1",
@@ -184,8 +184,64 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 236,
-      "latencyMs": 10784
+      "tokenCount": 221,
+      "latencyMs": 10610
+    },
+    {
+      "problemId": "math-1",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.4,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 303,
+      "latencyMs": 3716
+    },
+    {
+      "problemId": "math-1",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.4,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 296,
+      "latencyMs": 6187
+    },
+    {
+      "problemId": "math-1",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.4,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 229,
+      "latencyMs": 3109
+    },
+    {
+      "problemId": "math-1",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.4,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 196,
+      "latencyMs": 2995
     },
     {
       "problemId": "math-2",
@@ -194,26 +250,26 @@
       "domain": "math",
       "correct": true,
       "correctnessScore": 0.5,
-      "formatScore": 8,
+      "formatScore": 6,
       "hasLatex": true,
       "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 243,
-      "latencyMs": 10600
-    },
-    {
-      "problemId": "math-2",
-      "model": "claude",
-      "condition": "1-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 0.5,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
+      "hasSteps": false,
       "tokenCount": 205,
-      "latencyMs": 9884
+      "latencyMs": 10036
+    },
+    {
+      "problemId": "math-2",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.5,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 204,
+      "latencyMs": 9832
     },
     {
       "problemId": "math-2",
@@ -226,8 +282,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 219,
-      "latencyMs": 18872
+      "tokenCount": 204,
+      "latencyMs": 10496
     },
     {
       "problemId": "math-2",
@@ -240,120 +296,288 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 183,
-      "latencyMs": 10434
+      "tokenCount": 180,
+      "latencyMs": 10521
     },
     {
-      "problemId": "math-3",
-      "model": "claude",
-      "condition": "zero-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 181,
-      "latencyMs": 10280
-    },
-    {
-      "problemId": "math-3",
-      "model": "claude",
-      "condition": "1-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 193,
-      "latencyMs": 11151
-    },
-    {
-      "problemId": "math-3",
-      "model": "claude",
-      "condition": "3-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 187,
-      "latencyMs": 10411
-    },
-    {
-      "problemId": "math-3",
-      "model": "claude",
-      "condition": "5-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 183,
-      "latencyMs": 10706
-    },
-    {
-      "problemId": "math-4",
-      "model": "claude",
+      "problemId": "math-2",
+      "model": "gemini",
       "condition": "zero-shot",
       "domain": "math",
       "correct": true,
       "correctnessScore": 0.5,
-      "formatScore": 8,
+      "formatScore": 6,
       "hasLatex": true,
       "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 264,
-      "latencyMs": 12060
+      "hasSteps": false,
+      "tokenCount": 247,
+      "latencyMs": 3926
     },
     {
-      "problemId": "math-4",
-      "model": "claude",
+      "problemId": "math-2",
+      "model": "gemini",
       "condition": "1-shot",
       "domain": "math",
       "correct": true,
       "correctnessScore": 0.5,
-      "formatScore": 8,
+      "formatScore": 6,
       "hasLatex": true,
       "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 253,
-      "latencyMs": 11218
-    },
-    {
-      "problemId": "math-4",
-      "model": "claude",
-      "condition": "3-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 0.6666666666666666,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 231,
-      "latencyMs": 10159
-    },
-    {
-      "problemId": "math-4",
-      "model": "claude",
-      "condition": "5-shot",
-      "domain": "math",
-      "correct": true,
-      "correctnessScore": 0.6666666666666666,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
+      "hasSteps": false,
       "tokenCount": 249,
-      "latencyMs": 17364
+      "latencyMs": 4881
+    },
+    {
+      "problemId": "math-2",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.5,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 125,
+      "latencyMs": 2134
+    },
+    {
+      "problemId": "math-2",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.5,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 116,
+      "latencyMs": 2236
+    },
+    {
+      "problemId": "math-3",
+      "model": "claude",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 185,
+      "latencyMs": 11107
+    },
+    {
+      "problemId": "math-3",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 154,
+      "latencyMs": 9652
+    },
+    {
+      "problemId": "math-3",
+      "model": "claude",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 148,
+      "latencyMs": 9460
+    },
+    {
+      "problemId": "math-3",
+      "model": "claude",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 141,
+      "latencyMs": 9577
+    },
+    {
+      "problemId": "math-3",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 155,
+      "latencyMs": 3186
+    },
+    {
+      "problemId": "math-3",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 297,
+      "latencyMs": 3535
+    },
+    {
+      "problemId": "math-3",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 97,
+      "latencyMs": 1838
+    },
+    {
+      "problemId": "math-3",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 120,
+      "latencyMs": 2302
+    },
+    {
+      "problemId": "math-4",
+      "model": "claude",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.5,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 255,
+      "latencyMs": 10622
+    },
+    {
+      "problemId": "math-4",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.5,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 229,
+      "latencyMs": 10919
+    },
+    {
+      "problemId": "math-4",
+      "model": "claude",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.6666666666666666,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 232,
+      "latencyMs": 10379
+    },
+    {
+      "problemId": "math-4",
+      "model": "claude",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.6666666666666666,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 230,
+      "latencyMs": 10436
+    },
+    {
+      "problemId": "math-4",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.6666666666666666,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 228,
+      "latencyMs": 5226
+    },
+    {
+      "problemId": "math-4",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.3333333333333333,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 184,
+      "latencyMs": 3075
+    },
+    {
+      "problemId": "math-4",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.6666666666666666,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 229,
+      "latencyMs": 2749
+    },
+    {
+      "problemId": "math-4",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": true,
+      "correctnessScore": 0.6666666666666666,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 158,
+      "latencyMs": 2154
     },
     {
       "problemId": "math-5",
@@ -366,8 +590,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 189,
-      "latencyMs": 9392
+      "tokenCount": 242,
+      "latencyMs": 11296
     },
     {
       "problemId": "math-5",
@@ -380,8 +604,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 207,
-      "latencyMs": 9611
+      "tokenCount": 220,
+      "latencyMs": 10314
     },
     {
       "problemId": "math-5",
@@ -394,8 +618,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 223,
-      "latencyMs": 10185
+      "tokenCount": 213,
+      "latencyMs": 14679
     },
     {
       "problemId": "math-5",
@@ -408,8 +632,64 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 222,
-      "latencyMs": 10816
+      "tokenCount": 230,
+      "latencyMs": 9976
+    },
+    {
+      "problemId": "math-5",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.25,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 259,
+      "latencyMs": 3546
+    },
+    {
+      "problemId": "math-5",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.25,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 225,
+      "latencyMs": 2790
+    },
+    {
+      "problemId": "math-5",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.25,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 174,
+      "latencyMs": 2302
+    },
+    {
+      "problemId": "math-5",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "math",
+      "correct": false,
+      "correctnessScore": 0.25,
+      "formatScore": 6,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 180,
+      "latencyMs": 2395
     },
     {
       "problemId": "physics-1",
@@ -423,7 +703,7 @@
       "hasBoxedAnswer": false,
       "hasSteps": true,
       "tokenCount": 270,
-      "latencyMs": 10848
+      "latencyMs": 10732
     },
     {
       "problemId": "physics-1",
@@ -436,8 +716,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 215,
-      "latencyMs": 9752
+      "tokenCount": 214,
+      "latencyMs": 9731
     },
     {
       "problemId": "physics-1",
@@ -451,7 +731,7 @@
       "hasBoxedAnswer": true,
       "hasSteps": false,
       "tokenCount": 187,
-      "latencyMs": 10349
+      "latencyMs": 9211
     },
     {
       "problemId": "physics-1",
@@ -464,8 +744,64 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 167,
-      "latencyMs": 8646
+      "tokenCount": 187,
+      "latencyMs": 9042
+    },
+    {
+      "problemId": "physics-1",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 290,
+      "latencyMs": 4266
+    },
+    {
+      "problemId": "physics-1",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 194,
+      "latencyMs": 3051
+    },
+    {
+      "problemId": "physics-1",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 185,
+      "latencyMs": 2830
+    },
+    {
+      "problemId": "physics-1",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 189,
+      "latencyMs": 2810
     },
     {
       "problemId": "physics-2",
@@ -473,13 +809,13 @@
       "condition": "zero-shot",
       "domain": "physics",
       "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 7,
+      "correctnessScore": 0.8,
+      "formatScore": 5,
       "hasLatex": true,
       "hasBoxedAnswer": false,
-      "hasSteps": true,
-      "tokenCount": 280,
-      "latencyMs": 11201
+      "hasSteps": false,
+      "tokenCount": 298,
+      "latencyMs": 11373
     },
     {
       "problemId": "physics-2",
@@ -492,8 +828,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 182,
-      "latencyMs": 8799
+      "tokenCount": 174,
+      "latencyMs": 9216
     },
     {
       "problemId": "physics-2",
@@ -506,8 +842,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 172,
-      "latencyMs": 8722
+      "tokenCount": 127,
+      "latencyMs": 8087
     },
     {
       "problemId": "physics-2",
@@ -520,8 +856,64 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 170,
-      "latencyMs": 8399
+      "tokenCount": 127,
+      "latencyMs": 8373
+    },
+    {
+      "problemId": "physics-2",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 280,
+      "latencyMs": 3611
+    },
+    {
+      "problemId": "physics-2",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 132,
+      "latencyMs": 2302
+    },
+    {
+      "problemId": "physics-2",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 133,
+      "latencyMs": 2279
+    },
+    {
+      "problemId": "physics-2",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 133,
+      "latencyMs": 3240
     },
     {
       "problemId": "physics-3",
@@ -534,8 +926,8 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 181,
-      "latencyMs": 8797
+      "tokenCount": 177,
+      "latencyMs": 9290
     },
     {
       "problemId": "physics-3",
@@ -549,7 +941,7 @@
       "hasBoxedAnswer": true,
       "hasSteps": false,
       "tokenCount": 101,
-      "latencyMs": 7519
+      "latencyMs": 7798
     },
     {
       "problemId": "physics-3",
@@ -563,7 +955,7 @@
       "hasBoxedAnswer": true,
       "hasSteps": false,
       "tokenCount": 101,
-      "latencyMs": 7543
+      "latencyMs": 7480
     },
     {
       "problemId": "physics-3",
@@ -577,7 +969,63 @@
       "hasBoxedAnswer": true,
       "hasSteps": false,
       "tokenCount": 101,
-      "latencyMs": 9130
+      "latencyMs": 7411
+    },
+    {
+      "problemId": "physics-3",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 227,
+      "latencyMs": 2857
+    },
+    {
+      "problemId": "physics-3",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 101,
+      "latencyMs": 1828
+    },
+    {
+      "problemId": "physics-3",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 101,
+      "latencyMs": 1866
+    },
+    {
+      "problemId": "physics-3",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 101,
+      "latencyMs": 2005
     },
     {
       "problemId": "physics-4",
@@ -590,8 +1038,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 281,
-      "latencyMs": 11623
+      "tokenCount": 262,
+      "latencyMs": 11076
     },
     {
       "problemId": "physics-4",
@@ -604,8 +1052,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 211,
-      "latencyMs": 10355
+      "tokenCount": 202,
+      "latencyMs": 11232
     },
     {
       "problemId": "physics-4",
@@ -618,8 +1066,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 229,
-      "latencyMs": 10436
+      "tokenCount": 198,
+      "latencyMs": 9561
     },
     {
       "problemId": "physics-4",
@@ -632,78 +1080,190 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 194,
-      "latencyMs": 10090
+      "tokenCount": 198,
+      "latencyMs": 9849
     },
     {
-      "problemId": "chem-1",
-      "model": "claude",
+      "problemId": "physics-4",
+      "model": "gemini",
       "condition": "zero-shot",
-      "domain": "chem",
+      "domain": "physics",
       "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 10,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 250,
-      "latencyMs": 11283
-    },
-    {
-      "problemId": "chem-1",
-      "model": "claude",
-      "condition": "1-shot",
-      "domain": "chem",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 10,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 242,
-      "latencyMs": 12380
-    },
-    {
-      "problemId": "chem-1",
-      "model": "claude",
-      "condition": "3-shot",
-      "domain": "chem",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 10,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": true,
-      "tokenCount": 351,
-      "latencyMs": 14320
-    },
-    {
-      "problemId": "chem-1",
-      "model": "claude",
-      "condition": "5-shot",
-      "domain": "chem",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 8,
-      "hasLatex": true,
-      "hasBoxedAnswer": true,
-      "hasSteps": false,
-      "tokenCount": 292,
-      "latencyMs": 13690
-    },
-    {
-      "problemId": "chem-2",
-      "model": "claude",
-      "condition": "zero-shot",
-      "domain": "chem",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 4,
+      "correctnessScore": 0.8333333333333334,
+      "formatScore": 2,
       "hasLatex": false,
       "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 306,
+      "latencyMs": 3878
+    },
+    {
+      "problemId": "physics-4",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8333333333333334,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 187,
+      "latencyMs": 2982
+    },
+    {
+      "problemId": "physics-4",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8333333333333334,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 156,
+      "latencyMs": 2875
+    },
+    {
+      "problemId": "physics-4",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "physics",
+      "correct": true,
+      "correctnessScore": 0.8333333333333334,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 154,
+      "latencyMs": 3078
+    },
+    {
+      "problemId": "chem-1",
+      "model": "claude",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": false,
+      "correctnessScore": 0,
+      "formatScore": 10,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 251,
-      "latencyMs": 11723
+      "tokenCount": 314,
+      "latencyMs": 13374
+    },
+    {
+      "problemId": "chem-1",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 10,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 270,
+      "latencyMs": 13056
+    },
+    {
+      "problemId": "chem-1",
+      "model": "claude",
+      "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 274,
+      "latencyMs": 13568
+    },
+    {
+      "problemId": "chem-1",
+      "model": "claude",
+      "condition": "5-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 0.75,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 310,
+      "latencyMs": 14279
+    },
+    {
+      "problemId": "chem-1",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 334,
+      "latencyMs": 3722
+    },
+    {
+      "problemId": "chem-1",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 395,
+      "latencyMs": 4625
+    },
+    {
+      "problemId": "chem-1",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 285,
+      "latencyMs": 3938
+    },
+    {
+      "problemId": "chem-1",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 497,
+      "latencyMs": 6286
+    },
+    {
+      "problemId": "chem-2",
+      "model": "claude",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 10,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 255,
+      "latencyMs": 12806
     },
     {
       "problemId": "chem-2",
@@ -716,13 +1276,27 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 195,
-      "latencyMs": 10568
+      "tokenCount": 189,
+      "latencyMs": 10400
     },
     {
       "problemId": "chem-2",
       "model": "claude",
       "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 198,
+      "latencyMs": 10284
+    },
+    {
+      "problemId": "chem-2",
+      "model": "claude",
+      "condition": "5-shot",
       "domain": "chem",
       "correct": true,
       "correctnessScore": 1,
@@ -731,11 +1305,53 @@
       "hasBoxedAnswer": true,
       "hasSteps": false,
       "tokenCount": 178,
-      "latencyMs": 9381
+      "latencyMs": 9650
     },
     {
       "problemId": "chem-2",
-      "model": "claude",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 316,
+      "latencyMs": 3108
+    },
+    {
+      "problemId": "chem-2",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 172,
+      "latencyMs": 2228
+    },
+    {
+      "problemId": "chem-2",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 147,
+      "latencyMs": 2925
+    },
+    {
+      "problemId": "chem-2",
+      "model": "gemini",
       "condition": "5-shot",
       "domain": "chem",
       "correct": true,
@@ -744,8 +1360,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": false,
-      "tokenCount": 192,
-      "latencyMs": 10876
+      "tokenCount": 121,
+      "latencyMs": 1902
     },
     {
       "problemId": "chem-3",
@@ -758,8 +1374,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 211,
-      "latencyMs": 10071
+      "tokenCount": 217,
+      "latencyMs": 10106
     },
     {
       "problemId": "chem-3",
@@ -768,12 +1384,12 @@
       "domain": "chem",
       "correct": true,
       "correctnessScore": 1,
-      "formatScore": 8,
+      "formatScore": 10,
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 162,
-      "latencyMs": 9009
+      "tokenCount": 238,
+      "latencyMs": 10285
     },
     {
       "problemId": "chem-3",
@@ -782,12 +1398,12 @@
       "domain": "chem",
       "correct": true,
       "correctnessScore": 1,
-      "formatScore": 10,
+      "formatScore": 8,
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 210,
-      "latencyMs": 10491
+      "tokenCount": 148,
+      "latencyMs": 8657
     },
     {
       "problemId": "chem-3",
@@ -796,12 +1412,68 @@
       "domain": "chem",
       "correct": true,
       "correctnessScore": 1,
-      "formatScore": 10,
+      "formatScore": 8,
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 273,
-      "latencyMs": 11233
+      "tokenCount": 156,
+      "latencyMs": 8974
+    },
+    {
+      "problemId": "chem-3",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 0,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 249,
+      "latencyMs": 3317
+    },
+    {
+      "problemId": "chem-3",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 3,
+      "hasLatex": false,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 133,
+      "latencyMs": 3107
+    },
+    {
+      "problemId": "chem-3",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 3,
+      "hasLatex": false,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 200,
+      "latencyMs": 2573
+    },
+    {
+      "problemId": "chem-3",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 3,
+      "hasLatex": false,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 150,
+      "latencyMs": 4507
     },
     {
       "problemId": "chem-4",
@@ -814,8 +1486,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 434,
-      "latencyMs": 17412
+      "tokenCount": 419,
+      "latencyMs": 16093
     },
     {
       "problemId": "chem-4",
@@ -828,8 +1500,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 395,
-      "latencyMs": 16492
+      "tokenCount": 343,
+      "latencyMs": 15808
     },
     {
       "problemId": "chem-4",
@@ -842,8 +1514,8 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 329,
-      "latencyMs": 14743
+      "tokenCount": 376,
+      "latencyMs": 16773
     },
     {
       "problemId": "chem-4",
@@ -856,13 +1528,209 @@
       "hasLatex": true,
       "hasBoxedAnswer": true,
       "hasSteps": true,
-      "tokenCount": 321,
-      "latencyMs": 14698
+      "tokenCount": 330,
+      "latencyMs": 15630
+    },
+    {
+      "problemId": "chem-4",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 4,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": true,
+      "tokenCount": 582,
+      "latencyMs": 4913
+    },
+    {
+      "problemId": "chem-4",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "chem",
+      "correct": false,
+      "correctnessScore": 0.2,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 444,
+      "latencyMs": 4257
+    },
+    {
+      "problemId": "chem-4",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 10,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": true,
+      "tokenCount": 382,
+      "latencyMs": 4699
+    },
+    {
+      "problemId": "chem-4",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "chem",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 8,
+      "hasLatex": true,
+      "hasBoxedAnswer": true,
+      "hasSteps": false,
+      "tokenCount": 247,
+      "latencyMs": 3316
     },
     {
       "problemId": "bio-1",
       "model": "claude",
       "condition": "zero-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 500,
+      "latencyMs": 15949
+    },
+    {
+      "problemId": "bio-1",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 338,
+      "latencyMs": 12545
+    },
+    {
+      "problemId": "bio-1",
+      "model": "claude",
+      "condition": "3-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 360,
+      "latencyMs": 13775
+    },
+    {
+      "problemId": "bio-1",
+      "model": "claude",
+      "condition": "5-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 337,
+      "latencyMs": 12495
+    },
+    {
+      "problemId": "bio-1",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 913,
+      "latencyMs": 5306
+    },
+    {
+      "problemId": "bio-1",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 587,
+      "latencyMs": 4793
+    },
+    {
+      "problemId": "bio-1",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 690,
+      "latencyMs": 4950
+    },
+    {
+      "problemId": "bio-1",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 588,
+      "latencyMs": 3762
+    },
+    {
+      "problemId": "bio-2",
+      "model": "claude",
+      "condition": "zero-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 595,
+      "latencyMs": 14817
+    },
+    {
+      "problemId": "bio-2",
+      "model": "claude",
+      "condition": "1-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 413,
+      "latencyMs": 12586
+    },
+    {
+      "problemId": "bio-2",
+      "model": "claude",
+      "condition": "3-shot",
       "domain": "bio",
       "correct": true,
       "correctnessScore": 1,
@@ -871,38 +1739,10 @@
       "hasBoxedAnswer": false,
       "hasSteps": false,
       "tokenCount": 402,
-      "latencyMs": 13674
+      "latencyMs": 12448
     },
     {
-      "problemId": "bio-1",
-      "model": "claude",
-      "condition": "1-shot",
-      "domain": "bio",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 2,
-      "hasLatex": false,
-      "hasBoxedAnswer": false,
-      "hasSteps": false,
-      "tokenCount": 249,
-      "latencyMs": 10510
-    },
-    {
-      "problemId": "bio-1",
-      "model": "claude",
-      "condition": "3-shot",
-      "domain": "bio",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 2,
-      "hasLatex": false,
-      "hasBoxedAnswer": false,
-      "hasSteps": false,
-      "tokenCount": 239,
-      "latencyMs": 11873
-    },
-    {
-      "problemId": "bio-1",
+      "problemId": "bio-2",
       "model": "claude",
       "condition": "5-shot",
       "domain": "bio",
@@ -912,12 +1752,12 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 353,
-      "latencyMs": 12104
+      "tokenCount": 365,
+      "latencyMs": 11997
     },
     {
       "problemId": "bio-2",
-      "model": "claude",
+      "model": "gemini",
       "condition": "zero-shot",
       "domain": "bio",
       "correct": true,
@@ -926,12 +1766,12 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 662,
-      "latencyMs": 18277
+      "tokenCount": 980,
+      "latencyMs": 6579
     },
     {
       "problemId": "bio-2",
-      "model": "claude",
+      "model": "gemini",
       "condition": "1-shot",
       "domain": "bio",
       "correct": true,
@@ -940,12 +1780,12 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 422,
-      "latencyMs": 12199
+      "tokenCount": 594,
+      "latencyMs": 4404
     },
     {
       "problemId": "bio-2",
-      "model": "claude",
+      "model": "gemini",
       "condition": "3-shot",
       "domain": "bio",
       "correct": true,
@@ -954,12 +1794,12 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 422,
-      "latencyMs": 12369
+      "tokenCount": 538,
+      "latencyMs": 4004
     },
     {
       "problemId": "bio-2",
-      "model": "claude",
+      "model": "gemini",
       "condition": "5-shot",
       "domain": "bio",
       "correct": true,
@@ -968,13 +1808,27 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 385,
-      "latencyMs": 12696
+      "tokenCount": 585,
+      "latencyMs": 4783
     },
     {
       "problemId": "bio-3",
       "model": "claude",
       "condition": "zero-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 1,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 379,
+      "latencyMs": 14477
+    },
+    {
+      "problemId": "bio-3",
+      "model": "claude",
+      "condition": "1-shot",
       "domain": "bio",
       "correct": true,
       "correctnessScore": 0.8,
@@ -982,22 +1836,8 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 353,
-      "latencyMs": 12605
-    },
-    {
-      "problemId": "bio-3",
-      "model": "claude",
-      "condition": "1-shot",
-      "domain": "bio",
-      "correct": true,
-      "correctnessScore": 1,
-      "formatScore": 2,
-      "hasLatex": false,
-      "hasBoxedAnswer": false,
-      "hasSteps": false,
-      "tokenCount": 249,
-      "latencyMs": 11160
+      "tokenCount": 307,
+      "latencyMs": 12098
     },
     {
       "problemId": "bio-3",
@@ -1010,8 +1850,8 @@
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 257,
-      "latencyMs": 10619
+      "tokenCount": 273,
+      "latencyMs": 11028
     },
     {
       "problemId": "bio-3",
@@ -1019,13 +1859,69 @@
       "condition": "5-shot",
       "domain": "bio",
       "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 256,
+      "latencyMs": 10178
+    },
+    {
+      "problemId": "bio-3",
+      "model": "gemini",
+      "condition": "zero-shot",
+      "domain": "bio",
+      "correct": true,
       "correctnessScore": 1,
       "formatScore": 2,
       "hasLatex": false,
       "hasBoxedAnswer": false,
       "hasSteps": false,
-      "tokenCount": 281,
-      "latencyMs": 11485
+      "tokenCount": 1036,
+      "latencyMs": 4548
+    },
+    {
+      "problemId": "bio-3",
+      "model": "gemini",
+      "condition": "1-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 322,
+      "latencyMs": 2808
+    },
+    {
+      "problemId": "bio-3",
+      "model": "gemini",
+      "condition": "3-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 306,
+      "latencyMs": 2786
+    },
+    {
+      "problemId": "bio-3",
+      "model": "gemini",
+      "condition": "5-shot",
+      "domain": "bio",
+      "correct": true,
+      "correctnessScore": 0.8,
+      "formatScore": 2,
+      "hasLatex": false,
+      "hasBoxedAnswer": false,
+      "hasSteps": false,
+      "tokenCount": 226,
+      "latencyMs": 1992
     }
   ]
 }

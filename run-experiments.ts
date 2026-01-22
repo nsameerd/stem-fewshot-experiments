@@ -10,6 +10,10 @@
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
+import * as dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config({ path: path.resolve(__dirname, '../../.env.local') });
 
 const OUTPUT_DIR = path.join(__dirname, 'results');
 const PROMPTS_DIR = path.join(__dirname, 'prompts');
@@ -498,24 +502,68 @@ function callClaude(prompt: string): { response: string; latencyMs: number } {
   }
 }
 
-function callGemini(prompt: string): { response: string; latencyMs: number } {
-  const tempFile = '/tmp/gemini-prompt.txt';
-  fs.writeFileSync(tempFile, prompt);
+async function callGemini(prompt: string, retries = 3): Promise<{ response: string; latencyMs: number }> {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return { response: 'ERROR: GEMINI_API_KEY not found in environment', latencyMs: 0 };
+  }
 
   const startTime = Date.now();
-  try {
-    const result = execSync(`cat "${tempFile}" | gemini -m gemini-2.0-flash`, {
-      encoding: 'utf-8',
-      maxBuffer: 50 * 1024 * 1024,
-      timeout: 120000,
-    });
-    const latencyMs = Date.now() - startTime;
-    return { response: result.trim(), latencyMs };
-  } catch (error: any) {
-    const latencyMs = Date.now() - startTime;
-    console.error('Gemini CLI error:', error.message);
-    return { response: `ERROR: ${error.message}`, latencyMs };
+
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            contents: [{
+              parts: [{ text: prompt }]
+            }],
+            generationConfig: {
+              temperature: 0.7,
+              maxOutputTokens: 2048,
+            }
+          })
+        }
+      );
+
+      const latencyMs = Date.now() - startTime;
+
+      if (response.status === 429) {
+        // Rate limited - exponential backoff
+        const waitTime = Math.pow(2, attempt + 1) * 5000; // 10s, 20s, 40s
+        console.log(`  Rate limited, waiting ${waitTime / 1000}s before retry ${attempt + 1}/${retries}...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+        continue;
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Gemini API error:', errorText);
+        return { response: `ERROR: ${response.status} - ${errorText}`, latencyMs };
+      }
+
+      const data = await response.json();
+      const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
+      return { response: text.trim(), latencyMs };
+    } catch (error: any) {
+      const latencyMs = Date.now() - startTime;
+      if (attempt === retries - 1) {
+        console.error('Gemini API error:', error.message);
+        return { response: `ERROR: ${error.message}`, latencyMs };
+      }
+      // Retry on network errors
+      const waitTime = Math.pow(2, attempt + 1) * 2000;
+      console.log(`  Network error, waiting ${waitTime / 1000}s before retry...`);
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+    }
   }
+
+  return { response: 'ERROR: Max retries exceeded', latencyMs: Date.now() - startTime };
 }
 
 function countTokensApprox(text: string): number {
@@ -539,7 +587,7 @@ async function runExperiment(
 
   const { response, latencyMs } = model === 'claude'
     ? callClaude(prompt)
-    : callGemini(prompt);
+    : await callGemini(prompt);
 
   return {
     problemId: problem.id,
@@ -556,8 +604,8 @@ async function runExperiment(
 async function runAllExperiments() {
   const results: ExperimentResult[] = [];
   const conditions = [0, 1, 3, 5]; // number of examples
-  // Only using Claude since Gemini CLI is unavailable
-  const models: Array<'claude' | 'gemini'> = ['claude'];
+  // Using both Claude and Gemini (Gemini via API)
+  const models: Array<'claude' | 'gemini'> = ['claude', 'gemini'];
 
   console.log('Starting STEM Few-Shot Experiments');
   console.log('==================================\n');
@@ -641,8 +689,69 @@ function analyzeResults(results: ExperimentResult[]) {
 // MAIN
 // ============================================================================
 
+async function retryFailedExperiments() {
+  const resultsPath = path.join(OUTPUT_DIR, 'experiment-results.json');
+  if (!fs.existsSync(resultsPath)) {
+    console.error('No results file found. Run experiments first.');
+    return;
+  }
+
+  const results: ExperimentResult[] = JSON.parse(fs.readFileSync(resultsPath, 'utf-8'));
+  const failedResults = results.filter(r => r.response.startsWith('ERROR'));
+
+  console.log(`Found ${failedResults.length} failed experiments to retry\n`);
+
+  for (const failed of failedResults) {
+    const problem = PROBLEMS.find(p => p.id === failed.problemId);
+    if (!problem) {
+      console.log(`  Skipping ${failed.problemId}: problem not found`);
+      continue;
+    }
+
+    const numExamples = failed.condition === 'zero-shot' ? 0 :
+      parseInt(failed.condition.replace('-shot', ''));
+
+    console.log(`Retrying: ${failed.problemId} - ${failed.model} - ${failed.condition}`);
+
+    const newResult = await runExperiment(problem, failed.model, numExamples);
+
+    // Replace the failed result
+    const index = results.findIndex(r =>
+      r.problemId === failed.problemId &&
+      r.model === failed.model &&
+      r.condition === failed.condition
+    );
+
+    if (index !== -1) {
+      results[index] = newResult;
+      console.log(`  ${newResult.response.startsWith('ERROR') ? 'Still failed' : 'Success!'}`);
+    }
+
+    // Save after each retry
+    fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
+
+    // Wait between retries to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 3000));
+  }
+
+  // Check remaining failures
+  const stillFailed = results.filter(r => r.response.startsWith('ERROR'));
+  console.log(`\nRetry complete. ${stillFailed.length} experiments still failed.`);
+
+  return results;
+}
+
 async function main() {
   const args = process.argv.slice(2);
+
+  if (args.includes('--retry-failed')) {
+    // Retry only failed experiments
+    const results = await retryFailedExperiments();
+    if (results) {
+      analyzeResults(results);
+    }
+    return;
+  }
 
   if (args.includes('--analyze-only')) {
     // Just analyze existing results
@@ -663,12 +772,12 @@ async function main() {
 
     console.log('Testing Claude zero-shot...');
     const claudeResult = await runExperiment(testProblem, 'claude', 0);
-    console.log('Claude response preview:', claudeResult.response.slice(0, 200));
+    console.log('Claude response preview:', claudeResult.response.slice(0, 300));
     console.log(`Latency: ${claudeResult.latencyMs}ms\n`);
 
-    console.log('Testing Gemini zero-shot...');
+    console.log('Testing Gemini zero-shot (via API)...');
     const geminiResult = await runExperiment(testProblem, 'gemini', 0);
-    console.log('Gemini response preview:', geminiResult.response.slice(0, 200));
+    console.log('Gemini response preview:', geminiResult.response.slice(0, 300));
     console.log(`Latency: ${geminiResult.latencyMs}ms\n`);
 
     return;
