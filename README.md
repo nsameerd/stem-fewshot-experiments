@@ -48,4 +48,4 @@ MIT
 
 ## Related Article
 
-See the full analysis in our article: [Few-Shot Prompting for STEM: A Practitioner's Guide](https://mathematicon.com/articles/few-shot-prompting-stem-guide)
+See the full analysis in our article: [Few-Shot Prompting for STEM: A Practitioner's Guide](https://mathematicon.in/articles/few-shot-prompting-stem-guide)
